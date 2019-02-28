@@ -68,7 +68,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/ErrorDetails'
+              $ref: '#/definitions/ErrorMessage'
         '401':
           description: Unauthorized
         '500':
@@ -76,7 +76,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/ErrorDetails'
+              $ref: '#/definitions/ErrorMessage'
         '503':
           description: Service unavailable
         '504':
@@ -184,7 +184,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/ErrorDetails'
+              $ref: '#/definitions/ErrorMessage'
         '401':
           description: Unauthorized
         '500':
@@ -192,7 +192,7 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/ErrorDetails'
+              $ref: '#/definitions/ErrorMessage'
         '503':
           description: Service unavailable
         '504':
@@ -244,27 +244,13 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/ErrorDetails'
+              $ref: '#/definitions/ErrorMessage'
         '503':
           description: Service unavailable
         '504':
           description: Gateway Timeout
       deprecated: false
 definitions:
-  ErrorDetails:
-    type: object
-    properties:
-      developerMsg:
-        type: string
-      errorCode:
-        type: string
-      errorField:
-        type: string
-      errorKey:
-        type: string
-      errorMessage:
-        type: string
-    title: ErrorDetails
   ErrorMessage:
     type: object
     properties:
